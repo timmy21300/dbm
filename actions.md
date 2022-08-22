@@ -1,7 +1,11 @@
 Action | Category | Description | IMG
 :-  |  :-  |  :-  |  :-:
+Action Anchor | Other Stuff | Creates an Anchor to set actions to jump to |
+Action Container | Other Stuff | A tidy way to run a bunch of related actions |
+Add Embed to Message Data | Embed Message | Adds a embed to a message you wish to edit |
 Add Embed Field | Messaging | Adds a new field to an embed message, requires `Create Embed Message` | 
 Add Item to List | Lists and Loops | Adds an item to a previously created list. | 
+Archive Thread | Channel Control | Archives a thread |
 Add Member Role | Member Control | Adds a role to a specified member | 
 Add Reaction | Messaging | Adds an emoji reaction to the specified message | 
 Apply Image Effect | Image Editing | Applies effects to an image (grayscale, invert, transparancy, blur, dither) | 
@@ -18,10 +22,11 @@ Check Variable | Conditions | Check the value of a variable, things like "variab
 Check Variable Type | Conditions | Check the type of a variable, things like "variable is number" or "variable is channel". In JavaScript this is an `if... then...` | 
 Clear Queue | Audio Control | Clears the bots music queue | 
 Control Audio | Audio Control | Stop / Pause / Resume playback of audio | 
-Control Member Data | Deprecated | Saves member data to the `data/players.json` file | 
-Control Server Data | Deprecated | Saves server data to the `data/servers.json` file | 
+Control Member Data | Data | Saves member data to the `data/players.json` file | 
+Control Message Data | Data | Saves message data to the `data/messages.json` file |
+Control Server Data | Data | Saves server data to the `data/servers.json` file | 
 Control Variable | Other Stuff | Sets the value of a variable | [link](https://raw.githubusercontent.com/Silversunset01/dbm/master/screenshots/actions/controlvariable.PNG)
-Convert List to Text | Lists and Loops | Transforms a list from JSON format `["item","item","item"]` to something more friendly like <br/>`- item`<br/>`- item`<br/>`- item` | 
+Convert List to Text | Lists and Loops | Transforms a list from JSON format `["item","item","item"]` to something more friendly like <br/>`- item`<br/>`- item`<br/>`- item` |
 Create Embed Message | Messaging | Creates a rich embed message. See [this tutorial](https://silversunset.net/dbm/tutorials?topic=Embed_Messages) for more information. | 
 Create Emoji | Emoji Control | Creates an emoji on the server | 
 Create Image | Image Editing | Creates an image from a local file or web URL | 
@@ -29,6 +34,8 @@ Create Image from Avatar | Image Editing | Creates an image from a users avatar 
 Create Invite | Channel Control | Creates an invite for the specified channel | 
 Create List | Lists and Loops | Creates a list, in JavaScript this is referred to as an Array | 
 Create Role | Role Control | Creates a new role | 
+Create Sticker | Emoji/Sticker Control | Creates a sticker on the server |
+Create Thread | Channel Control | Creates a new thread channel |
 Create Text Channel | Channel Control | Creates a new text channel | 
 Create Voice Channel | Channel Control | Creates a new voice channel | 
 Delete Bulk Messages | Messaging | Deletes multiple messages. Due to Discords API limits you may only delete 2-100 messages at a time and they must be < 14 days old | 
@@ -36,26 +43,34 @@ Delete Channel | Channel Control | Deletes a channel from the server |
 Delete Emoji | Emoji Control | Deletes an emoji from the server | 
 Delete Message | Messaging | Delete a single message | 
 Delete Role | Role Control | Deletes a role from the server | 
+Delete Sticker | Emoji/Sticker Control | Deletes a sticker from the server |
+Disable Button/Select | Messaging | Disables or re-enables a button or select menu | 
+Disable Command | Other Stuff | Disables or Re-enables a slash command |
 Draw Image on Image | Image Editing | Combines two images (using Overlay/Mask/Replace options) | 
 Draw Text on Image | Image Editing | Adds text to an image | 
 Edit Message | Messaging | Edit the content of a message | 
-Edit Role | Role Control | Edits an existing role (hoisted / mentionable) | 
+Edit Channel | Channel Control | Edit an existing channel (voice/ text or thread) |
+Edit Role | Role Control | Edits an existing role (hoisted / mentionable) |
+Edit Select Options | Messaging | Add or remove options from a select menu |
 End Action Sequence | Other Stuff | Stops all actions in the current command / event (often used in conjunction with `Check Variable` | [link](https://raw.githubusercontent.com/Silversunset01/dbm/master/screenshots/actions/endactionsequence.PNG)
 Find Channel | Channel Control | Get a channel object for a text channel | 
 Find Custom Emoji | Emoji Control | Finds a custom emoji on the server, searches by ID or Name | 
 Find Member | Member Control | Obtains the member object | 
 Find Role | Role Control | Gets the role object of a specified role | 
 Find Server | Server Control | Gets the server object of a specified server | 
+Find Thread | Channel Control | Gets the thread object of a specified thread |
 Find Voice Channel | Channel Control | Get a channel object for a voice channel | 
 Generate Random Number | Other Stuff | Chooses a random number within a specified range | [link](https://raw.githubusercontent.com/Silversunset01/dbm/master/screenshots/actions/generaterandomnumber.PNG)
 Get Bot as Member | Bot Client Control | Get the bot member object | 
 Get Item from List | Lists and Loops | Retrieve an item from a previously created list | 
-Get List Length | Lists and Loops | Count the number of items in a previously created list | 
+Get List Length | Lists and Loops | Count the number of items in a previously created list |
+Go to Anchor | Other Stuff | Jumps to an anchor, requires `Action Anchor` action |
+Image Effect | Image Editing | Adds an effect to an image |
 Join Voice Channel | Audio Control | Makes the bot Join a specified voice channel | 
 Kick Member | Member Control | Kicks a member from the server | 
 Leave Voice Channel | Audio Control | Makes the bot leave a specified voice channel | 
 Loop Through All Servers | Lists and Loops | Cycles through all of the bots servers to perform actions. Requires an event that contains the actions to perform. | 
-Loop Through List | Lists and Loops | Cycle through a previously created list and perform actions for each item, requires an event as well that contains all actions to perform for each object. See [this tutorial](https://silversunset.net/dbm/tutorials#miscellaneous-tutorials-lists-loops) for more info | 
+Loop Through List | Lists and Loops | Cycle through a previously created list and perform actions for each item See [this tutorial](https://silversunset.net/dbm/tutorials#miscellaneous-tutorials-lists-loops) for more info | 
 Pin Message | Messaging | Pin a message to a channel | 
 Play File | Audio Control | Plays an audio file located within the bots file system | 
 Play URL | Audio Control | Plays an audio file located on the internet | 
